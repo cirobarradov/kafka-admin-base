@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-  
+
 RUN apt-get update -y \
     && echo "Installing confluent depencencies ...." \
     && apt-get install -y \
@@ -10,6 +10,7 @@ RUN apt-get update -y \
        curl \
        default-jre \
        default-jdk \
+       python3.6 \
        kafkacat \
        software-properties-common \
    &&  wget -qO - https://packages.confluent.io/deb/5.2/archive.key | apt-key add - \
