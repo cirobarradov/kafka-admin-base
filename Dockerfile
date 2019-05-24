@@ -13,10 +13,10 @@ RUN apt-get update -y \
        python3.6 \
        kafkacat \
        software-properties-common \
-   &&  wget -qO - https://packages.confluent.io/deb/5.2/archive.key | apt-key add - \
+    && wget -qO - https://packages.confluent.io/deb/5.2/archive.key | apt-key add - \
     && add-apt-repository "deb [arch=amd64] https://packages.confluent.io/deb/5.2 stable main" \
     && apt-get update -y \
     && echo "Installing confluent package  ...." \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    && apt-get install -y \
         confluent-platform-2.12 \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
