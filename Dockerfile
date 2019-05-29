@@ -11,6 +11,7 @@ RUN apt-get update -y \
        default-jre \
        default-jdk \
        python3.6 \
+       python3-pip \
        kafkacat \
        software-properties-common \
     && wget -qO - https://packages.confluent.io/deb/5.2/archive.key | apt-key add - \
